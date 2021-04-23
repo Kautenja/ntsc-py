@@ -15,8 +15,8 @@ with open('README.md') as README_file:
 
 
 # The prefix name for the .so library to build. It will follow the format
-# lib_ntsc_env.*.so where the * changes depending on the build system
-LIB_NAME = 'ntsc_py.lib_ntsc_env'
+# lib_ntsc.*.so where the * changes depending on the build system
+LIB_NAME = 'ntsc_py.lib_ntsc'
 # The source files for building the extension. Globs locate all the cpp files
 # used by the NTSC C++ subproject. MANIFEST.in has to include the blanket
 # "cpp" directory to ensure that the .inc file gets included too
