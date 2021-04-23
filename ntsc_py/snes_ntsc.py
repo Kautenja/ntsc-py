@@ -103,6 +103,23 @@ LIBRARY.SNES_NTSC_Process.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.P
 LIBRARY.SNES_NTSC_Process.restype = None
 
 
+def rgb32_888_to_rgb16_565(img):
+    """
+    Convert the 32-bit RGB888 image to 16-bit RGB565.
+
+    Args:
+        img: the 32-bit image in HWC format and RGB888 color space
+
+    Returns:
+        the 16-bit image in HWC format in RGB565 color space
+
+    """
+    r = ((32 * img[..., 0:1] / 255).round().astype('uint16') & 0b11111) << 11
+    g = ((64 * img[..., 1:2] / 255).round().astype('uint16') & 0b111111) << 5
+    b =  (32 * img[..., 2:3] / 255).round().astype('uint16') & 0b11111
+    return r + g + b
+
+
 class SNES_NTSC:
     """A graphical filter that models the NTSC Nintendo Entertainment System."""
 
@@ -126,7 +143,7 @@ class SNES_NTSC:
         self._output = LIBRARY.SNES_NTSC_InitializeOutputPixels()
         # create the input and output buffers
         shape_input = LIBRARY.SNES_NTSC_HEIGHT(), LIBRARY.SNES_NTSC_WIDTH_INPUT(), 1
-        self.nes_pixels = ndarray_from_byte_buffer(self._input, shape_input)
+        self.snes_pixels = ndarray_from_byte_buffer(self._input, shape_input, ctype=ctypes.c_uint16, dtype='uint16')
         shape_output = LIBRARY.SNES_NTSC_HEIGHT(), LIBRARY.SNES_NTSC_WIDTH_OUTPUT(), 4
         self.ntsc_pixels = ndarray_from_byte_buffer(self._output, shape_output)[:, :, 1:]
         # setup the flicker effect
@@ -148,7 +165,7 @@ class SNES_NTSC:
 
         Args:
             mode: the base mode to start with if any
-            kwargs: the kwargs of the nes_ntsc_setup_t structure to set
+            kwargs: the kwargs of the snes_ntsc_setup_t structure to set
 
         Returns:
             None
