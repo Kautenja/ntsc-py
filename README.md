@@ -98,7 +98,6 @@ Images can be filtered by assigning them to the input buffer of the image in
 NES pixel format using the NES palette of 64 unique colors.
 
 ```python
-import numpy as np
 ntsc.nes_pixels[:] = np.random.uniform(0, 63, ntsc.nes_pixels.shape)
 ```
 
