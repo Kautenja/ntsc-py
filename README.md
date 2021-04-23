@@ -21,6 +21,8 @@
 
 [Blargg-NTSC]: http://slack.net/~ant/libs/ntsc.html
 
+![nes-ntsc](https://user-images.githubusercontent.com/2184469/115817023-a0fdca00-a3bf-11eb-9a87-faf1d527ddc6.gif)
+
 # Installation
 
 The preferred installation of `ntsc-py` is from `pip`:
