@@ -46,7 +46,7 @@
             <img
                 width="256"
                 alt="SMS NTSC"
-                src=""
+                src="https://user-images.githubusercontent.com/2184469/115904006-e48d1e00-a429-11eb-967e-71c1ba2b01c5.gif"
             />
         </td>
     </tr>
