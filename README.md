@@ -20,3 +20,40 @@
 `ctypes` interfaces to Blargg's [NTSC filter libraries][Blargg-NTSC].
 
 [Blargg-NTSC]: http://slack.net/~ant/libs/ntsc.html
+
+# Installation
+
+The preferred installation of `ntsc-py` is from `pip`:
+
+```shell
+pip install ntsc-py
+```
+
+## Debian
+
+Make sure you have the `clang++` compiler installed:
+
+```shell
+sudo apt-get install clang
+```
+
+## Windows
+
+You'll need to install the Visual-Studio 17.0 tools for Windows installation.
+The [Visual Studio Community](https://visualstudio.microsoft.com/downloads/)
+package provides these tools for free.
+
+<!-- # Usage
+
+To filter images from the command line, using the following command.
+
+```shell
+ntsc_py -i <input image path> -o <output image path>
+```
+
+To print out documentation for the command line interface execute:
+
+```shell
+ntsc_py -h
+```
+ -->
