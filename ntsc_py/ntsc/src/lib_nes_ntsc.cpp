@@ -1,21 +1,26 @@
+// The library definition of the NES NTSC library.
+// Copyright 2021 Christian Kauten
+//
+// Author: Christian Kauten (kautenja@auburn.edu)
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
 
 #include <cstring>
 #include <cstdint>
 #include <cstdlib>
 #include <cstdio>
 #include "nes_ntsc.h"
-
-// Windows-base systems
-#if defined(_WIN32) || defined(WIN32) || defined(__CYGWIN__) || defined(__MINGW32__) || defined(__BORLANDC__)
-    // setup the module initializer. required to link visual studio C++ ctypes
-    void PyInit_lib_nes_env() { }
-    // setup the function modifier to export in the DLL
-    #define EXP __declspec(dllexport)
-// Unix-like systems
-#else
-    // setup the modifier as a dummy
-    #define EXP
-#endif
+#include "lib_ntsc.h"
 
 // definitions of functions for the Python interface to access
 extern "C" {
@@ -201,6 +206,3 @@ EXP void NES_NTSC_Process(
 }
 
 }  // extern "C"
-
-// un-define the macro
-#undef EXP
