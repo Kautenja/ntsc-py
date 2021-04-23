@@ -90,7 +90,7 @@ LIBRARY.SMS_NTSC_DestroyOutputPixels.restype = None
 
 
 # setup the argument and return types for SMS_NTSC_Process
-LIBRARY.SMS_NTSC_Process.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.POINTER(sms_ntsc_t), ctypes.c_bool]
+LIBRARY.SMS_NTSC_Process.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.POINTER(sms_ntsc_t)]
 LIBRARY.SMS_NTSC_Process.restype = None
 
 
