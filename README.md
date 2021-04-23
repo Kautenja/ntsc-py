@@ -67,7 +67,7 @@ To use the NES NTSC filter, first create an instance:
 
 ```python
 from ntsc_py import NES_NTSC
-filter = NES_NTSC()
+ntsc = NES_NTSC()
 ```
 
 The `setup` function can be used to configure the parameters of the filter. The
@@ -76,7 +76,7 @@ initialization of the filter. See the table below for a description of each of
 the parameters for the setup function
 
 ```python
-filter.setup(mode='composite', gamma=1, artifacts=2, sharpness=0.4, ...)
+ntsc.setup(mode='composite', gamma=1, artifacts=2, sharpness=0.4, ...)
 ```
 
 | Parameter      | Stable Values                              | Description                                                     |
@@ -93,3 +93,27 @@ filter.setup(mode='composite', gamma=1, artifacts=2, sharpness=0.4, ...)
 | `fringing`     | ?                                          | Controls influence of fringing caused by brightness changes.    |
 | `bleed`        | ?                                          | Controls the amount of color bleed (color resolution reduction) |
 | `merge_fields` | _[0, 1]_                                   | If true, merges even and off fields to reduce flicker.          |
+
+Images can be filtered by assigning them to the input buffer of the image in
+NES pixel format using the NES palette of 64 unique colors.
+
+```python
+import numpy as np
+ntsc.nes_pixels[:] = np.random.uniform(0, 63, ntsc.nes_pixels.shape)
+```
+
+Alternatively, RGB images can be converted to the NES palette using a mean
+squared error fit.
+
+```python
+from ntsc_py import rgb2nes, nes2rgb
+ntsc.nes_pixels[:] = rgb2nes(np.random.uniform(0, 255, ntsc.nes_pixels.shape[:2] + (3, )))
+```
+
+Once `nes_pixels` has been updated with new pixel data, call `process` to filter
+the image and compute the RGB output.
+
+```python
+ntsc.filter()
+plt.imshow(ntsc.ntsc_pixels)
+```
