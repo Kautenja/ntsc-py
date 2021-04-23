@@ -16,3 +16,7 @@
 [pypi-home]: https://badge.fury.io/py/ntsc-py
 [python-version]: https://img.shields.io/pypi/pyversions/ntsc-py.svg
 [python-home]: https://python.org
+
+`ctypes` interfaces to Blargg's [NTSC filter libraries][Blargg-NTSC].
+
+[Blargg-NTSC]: http://slack.net/~ant/libs/ntsc.html
