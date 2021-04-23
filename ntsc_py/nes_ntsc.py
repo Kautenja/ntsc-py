@@ -7,7 +7,7 @@ from .utility import ndarray_from_byte_buffer
 
 
 # the absolute path to the C++ shared object library
-LIBRARY_PATH = os.path.join(os.path.dirname(__file__), 'ntsc/lib_ntsc*')
+LIBRARY_PATH = os.path.join(os.path.dirname(__file__), 'lib_ntsc*')
 # load the library from the shared object file
 try:
     LIBRARY = ctypes.cdll.LoadLibrary(glob.glob(LIBRARY_PATH)[0])

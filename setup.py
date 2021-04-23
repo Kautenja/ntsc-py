@@ -16,11 +16,11 @@ with open('README.md') as README_file:
 
 # The prefix name for the .so library to build. It will follow the format
 # ntsc.*.so where the * changes depending on the build system
-LIB_NAME = 'ntsc_py.ntsc'
+LIB_NAME = 'ntsc_py.lib_ntsc'
 # The source files for building the extension. Globs locate all the cpp files
 # used by the NTSC C++ subproject. MANIFEST.in has to include the blanket
 # "cpp" directory to ensure that the .inc file gets included too
-SOURCES = glob('ntsc_py/ntsc/src/*.cpp') + glob('ntsc_py/ntsc/src/*.c')
+SOURCES = glob('ntsc_py/ntsc/src/*.cpp')
 # The directory pointing to header files used by the NTSC cpp files.
 # This directory has to be included using MANIFEST.in too to include the
 # headers with sdist
@@ -28,7 +28,7 @@ INCLUDE_DIRS = ['ntsc_py/ntsc/include']
 # Build arguments to pass to the compiler
 EXTRA_COMPILE_ARGS = ['-std=c++1y', '-march=native', '-pipe', '-O3']
 # The official extension using the name, source, headers, and build args
-LIB_NTSC_ENV = Extension(LIB_NAME,
+LIB_NTSC = Extension(LIB_NAME,
     sources=SOURCES,
     include_dirs=INCLUDE_DIRS,
     extra_compile_args=EXTRA_COMPILE_ARGS,
@@ -65,7 +65,7 @@ setup(
     author_email='kautencreations@gmail.com',
     license='MIT',
     packages=find_packages(exclude=['tests', '*.tests', '*.tests.*']),
-    ext_modules=[LIB_NTSC_ENV],
+    ext_modules=[LIB_NTSC],
     zip_safe=False,
     # install_requires=[
     #     'gym>=0.17.2',

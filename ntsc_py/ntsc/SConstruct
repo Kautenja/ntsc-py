@@ -27,6 +27,6 @@ ENV = Environment(
 
 
 # Locate all the C++ source files
-SRC = Glob('build/*.c') + Glob('build/*/*.c') + Glob('build/*.cpp') + Glob('build/*/*.cpp')
+SRC = Glob('build/*.cpp') + Glob('build/*/*.cpp')
 # Create a shared library (it will add "lib" to the front automatically)
 ENV.SharedLibrary('_ntsc.so', SRC)
