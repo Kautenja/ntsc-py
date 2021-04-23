@@ -39,7 +39,7 @@
              <img
                 width="256"
                 alt="SNES NTSC"
-                src="https://user-images.githubusercontent.com/2184469/115879621-7c314300-a40f-11eb-80a6-d5f9530ed6a9.gif"
+                src="https://user-images.githubusercontent.com/2184469/115882317-45a8f780-a412-11eb-91bb-0ec593194e0e.gif"
             />
         </td>
         <td>
