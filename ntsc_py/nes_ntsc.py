@@ -150,11 +150,11 @@ def nes2rgb(img):
 
 
 class NES_NTSC:
-    """A graphical filter that models the NTSC Nintendo Entertainment System."""
+    """A graphical filter that models the Nintendo Entertainment System."""
 
     def __init__(self, mode='rgb', flicker=False, **kwargs):
         """
-        Initialize a new NES NTSC graphical filter.
+        Initialize a new NES NES_NTSC graphical filter.
 
         Args:
             mode: the video mode to initialize the filter with
@@ -182,7 +182,7 @@ class NES_NTSC:
         self.setup(mode=mode, **kwargs)
 
     def __del__(self):
-        """Delete an instance of NES NTSC."""
+        """Delete an instance of NES_NTSC."""
         LIBRARY.NES_NTSC_DestroyConfiguration(self._config)
         LIBRARY.NES_NTSC_DestroySetup(self._setup)
         LIBRARY.NES_NTSC_DestroyInputPixels(self._input)
