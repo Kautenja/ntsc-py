@@ -2,12 +2,12 @@
 all: test deployment
 
 # build the LaiNES CPP code
-lib_ntsc_env:
+lib_ntsc:
 	scons -C ntsc_py/ntsc
-	mv ntsc_py/ntsc/lib_ntsc_env*.so ntsc_py
+	mv ntsc_py/ntsc/lib_ntsc*.so ntsc_py
 
 # run the Python test suite
-test: lib_ntsc_env
+test: lib_ntsc
 	python3 -m unittest discover .
 
 # clean the build directory
@@ -17,7 +17,7 @@ clean:
 	find . -name "__pycache__" -delete
 	find . -name ".sconsign.dblite" -delete
 	find . -name "build" | rm -rf
-	find . -name "lib_ntsc_env.so" -delete
+	find . -name "lib_ntsc.so" -delete
 
 # build the deployment package
 deployment: clean
