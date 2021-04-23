@@ -152,7 +152,7 @@ def nes2rgb(img):
 class NES_NTSC:
     """A graphical filter that models the NTSC Nintendo Entertainment System."""
 
-    def __init__(self, mode='rgb', flicker=True, **kwargs):
+    def __init__(self, mode='rgb', flicker=False, **kwargs):
         """
         Initialize a new NES NTSC graphical filter.
 
