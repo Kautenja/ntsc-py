@@ -12,7 +12,7 @@ LIBRARY_PATH = os.path.join(os.path.dirname(__file__), 'ntsc/lib_ntsc*')
 try:
     LIBRARY = ctypes.cdll.LoadLibrary(glob.glob(LIBRARY_PATH)[0])
 except IndexError:
-    raise OSError('missing static lib_ntsc_env*.so library!')
+    raise OSError('missing static lib_ntsc*.so library!')
 
 
 # setup the argument and return types for NES_NTSC_HEIGHT

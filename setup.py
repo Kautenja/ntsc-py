@@ -15,12 +15,12 @@ with open('README.md') as README_file:
 
 
 # The prefix name for the .so library to build. It will follow the format
-# lib_ntsc.*.so where the * changes depending on the build system
-LIB_NAME = 'ntsc_py.lib_ntsc'
+# ntsc.*.so where the * changes depending on the build system
+LIB_NAME = 'ntsc_py.ntsc'
 # The source files for building the extension. Globs locate all the cpp files
 # used by the NTSC C++ subproject. MANIFEST.in has to include the blanket
 # "cpp" directory to ensure that the .inc file gets included too
-SOURCES = glob('ntsc_py/ntsc/src/*.cpp') + glob('ntsc_py/ntsc/src/mappers/*.cpp')
+SOURCES = glob('ntsc_py/ntsc/src/*.cpp') + glob('ntsc_py/ntsc/src/*.c')
 # The directory pointing to header files used by the NTSC cpp files.
 # This directory has to be included using MANIFEST.in too to include the
 # headers with sdist
