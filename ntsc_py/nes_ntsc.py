@@ -1,18 +1,8 @@
 """A CTypes interface to Blargg's C++ NES NTSC filter."""
 import ctypes
-import glob
-import os
 import numpy as np
+from ._library import LIBRARY
 from .utility import ndarray_from_byte_buffer
-
-
-# the absolute path to the C++ shared object library
-LIBRARY_PATH = os.path.join(os.path.dirname(__file__), 'lib_ntsc*')
-# load the library from the shared object file
-try:
-    LIBRARY = ctypes.cdll.LoadLibrary(glob.glob(LIBRARY_PATH)[0])
-except IndexError:
-    raise OSError('missing static lib_ntsc*.so library!')
 
 
 # setup the argument and return types for NES_NTSC_HEIGHT

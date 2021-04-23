@@ -1,18 +1,8 @@
 """A CTypes interface to Blargg's C++ SNES NTSC filter."""
 import ctypes
-import glob
-import os
 import numpy as np
+from ._library import LIBRARY
 from .utility import ndarray_from_byte_buffer
-
-
-# the absolute path to the C++ shared object library
-LIBRARY_PATH = os.path.join(os.path.dirname(__file__), 'lib_ntsc*')
-# load the library from the shared object file
-try:
-    LIBRARY = ctypes.cdll.LoadLibrary(glob.glob(LIBRARY_PATH)[0])
-except IndexError:
-    raise OSError('missing static lib_ntsc*.so library!')
 
 
 # setup the argument and return types for SNES_NTSC_HEIGHT
@@ -161,7 +151,10 @@ class SNES_NTSC:
         self._output = LIBRARY.SNES_NTSC_InitializeOutputPixels()
         # create the input and output buffers
         shape_input = LIBRARY.SNES_NTSC_HEIGHT(), LIBRARY.SNES_NTSC_WIDTH_INPUT(), 1
-        self.snes_pixels = ndarray_from_byte_buffer(self._input, shape_input, ctype=ctypes.c_uint16, dtype='uint16')
+        self.snes_pixels = ndarray_from_byte_buffer(self._input, shape_input,
+            ctype=ctypes.c_uint16,
+            dtype='uint16'
+        )
         shape_output = LIBRARY.SNES_NTSC_HEIGHT(), LIBRARY.SNES_NTSC_WIDTH_OUTPUT(), 4
         self.ntsc_pixels = ndarray_from_byte_buffer(self._output, shape_output)[:, :, 1:]
         # setup the flicker effect
