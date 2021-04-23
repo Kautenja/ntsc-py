@@ -184,25 +184,21 @@ EXP void SMS_NTSC_DestroyOutputPixels(uint32_t* pixels) { free(pixels); }
 /// @param input_pixels the input pixel buffer to read SMS pixels from created
 /// by `SMS_NTSC_InitializeInputPixels`
 /// @param ntsc the ntsc instance created by `SMS_NTSC_InitializeConfiguration`
-/// @param is_even_frame whether this frame is even to emulate the flickering
-/// effect on every other frame
 ///
 EXP void SMS_NTSC_Process(
     uint32_t* const output_pixels,
     const uint16_t* const input_pixels,
-    const sms_ntsc_t* const ntsc,
-    bool is_even_frame = false
+    const sms_ntsc_t* const ntsc
 ) {
-    // sms_ntsc_blit(
-    //     ntsc,                     // configured NTSC object
-    //     input_pixels,             // input buffer of SMS pixels
-    //     SMS_NTSC_WIDTH_INPUT(),   // width of the SMS screen
-    //     is_even_frame,            // alternating frame flag
-    //     SMS_NTSC_WIDTH_INPUT(),   // width of the SMS screen
-    //     SMS_NTSC_HEIGHT(),        // height of the SMS screen
-    //     output_pixels,            // output buffer to write to
-    //     SMS_NTSC_PITCH()          // number of bytes in an output row
-    // );
+    sms_ntsc_blit(
+        ntsc,                     // configured NTSC object
+        input_pixels,             // input buffer of SMS pixels
+        SMS_NTSC_WIDTH_INPUT(),   // width of the SMS screen
+        SMS_NTSC_WIDTH_INPUT(),   // width of the SMS screen
+        SMS_NTSC_HEIGHT(),        // height of the SMS screen
+        output_pixels,            // output buffer to write to
+        SMS_NTSC_PITCH()          // number of bytes in an output row
+    );
 }
 
 }  // extern "C"
