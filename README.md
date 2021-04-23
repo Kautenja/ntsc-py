@@ -34,21 +34,21 @@
             <img
                 width="256"
                 alt="NES NTSC"
-                src="https://user-images.githubusercontent.com/2184469/115817023-a0fdca00-a3bf-11eb-9a87-faf1d527ddc6.gif"
+                src="./img/nes-ntsc.gif"
             />
         </td>
         <td>
              <img
                 width="256"
                 alt="SNES NTSC"
-                src=""
+                src="./img/snes-ntsc.gif"
             />
         </td>
         <td>
             <img
                 width="256"
                 alt="SMS NTSC"
-                src=""
+                src="./img/sms-ntsc.gif"
             />
         </td>
     </tr>
