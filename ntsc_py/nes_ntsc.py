@@ -1,4 +1,4 @@
-"""A CTypes interface to the C++ NES environment."""
+"""A CTypes interface to Blargg's C++ NES NTSC filter."""
 import ctypes
 import glob
 import os
