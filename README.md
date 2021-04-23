@@ -25,6 +25,11 @@
 
 <table align="center">
     <tr>
+        <th>NES NTSC</th>
+        <th>SNES NTSC</th>
+        <th>SMS NTSC</th>
+    </tr>
+    <tr>
         <td>
             <img
                 width="256"
