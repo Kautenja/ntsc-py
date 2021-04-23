@@ -110,9 +110,8 @@ ntsc.nes_pixels[:] = rgb2nes(np.random.uniform(0, 255, ntsc.nes_pixels.shape[:2]
 ```
 
 Once `nes_pixels` has been updated with new pixel data, call `process` to filter
-the image and compute the RGB output.
+the image and compute the RGB output in `ntsc_pixels`.
 
 ```python
 ntsc.filter()
-plt.imshow(ntsc.ntsc_pixels)
 ```
