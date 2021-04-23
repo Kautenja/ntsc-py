@@ -21,7 +21,33 @@
 
 [Blargg-NTSC]: http://slack.net/~ant/libs/ntsc.html
 
-![nes-ntsc](https://user-images.githubusercontent.com/2184469/115817023-a0fdca00-a3bf-11eb-9a87-faf1d527ddc6.gif)
+<!-- ![nes-ntsc](https://user-images.githubusercontent.com/2184469/115817023-a0fdca00-a3bf-11eb-9a87-faf1d527ddc6.gif) -->
+
+<table align="center">
+    <tr>
+        <td>
+            <img
+                width="256"
+                alt="NES NTSC"
+                src="https://user-images.githubusercontent.com/2184469/115817023-a0fdca00-a3bf-11eb-9a87-faf1d527ddc6.gif"
+            />
+        </td>
+        <td>
+             <img
+                width="256"
+                alt="SNES NTSC"
+                src=""
+            />
+        </td>
+        <td>
+            <img
+                width="256"
+                alt="SMS NTSC"
+                src=""
+            />
+        </td>
+    </tr>
+</table>
 
 # Installation
 
