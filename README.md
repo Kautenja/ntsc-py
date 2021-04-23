@@ -21,8 +21,6 @@
 
 [Blargg-NTSC]: http://slack.net/~ant/libs/ntsc.html
 
-<!-- ![nes-ntsc](https://user-images.githubusercontent.com/2184469/115817023-a0fdca00-a3bf-11eb-9a87-faf1d527ddc6.gif) -->
-
 <table align="center">
     <tr>
         <th>NES NTSC</th>
@@ -41,7 +39,7 @@
              <img
                 width="256"
                 alt="SNES NTSC"
-                src=""
+                src="https://user-images.githubusercontent.com/2184469/115879621-7c314300-a40f-11eb-80a6-d5f9530ed6a9.gif"
             />
         </td>
         <td>
