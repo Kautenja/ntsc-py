@@ -79,17 +79,17 @@ the parameters for the setup function
 filter.setup(mode='composite', gamma=1, artifacts=2, sharpness=0.4, ...)
 ```
 
-| Parameter      | Values | Description |
-|:---------------|:-------|:------------|
-| `mode`         |        |             |
-| `hue`          |        |             |
-| `saturation`   |        |             |
-| `contrast`     |        |             |
-| `brightness`   |        |             |
-| `sharpness`    |        |             |
-| `gamma`        |        |             |
-| `resolution`   |        |             |
-| `artifacts`    |        |             |
-| `fringing`     |        |             |
-| `bleed`        |        |             |
-| `merge_fields` |        |             |
+| Parameter      | Stable Values                              | Description                                                     |
+|:---------------|:-------------------------------------------|:----------------------------------------------------------------|
+| `mode`         | `rgb`, `composite`, `svideo`, `monochrome` | Sets all parameters to a preset value.                          |
+| `hue`          | _[-1.0, 1.0]_                              | Controls the hue of the image in degrees _[-180, 180]_.         |
+| `saturation`   | _[-1.0, 1.0]_                              | Controls the saturation from monochrome to over-saturated.      |
+| `contrast`     | _[-1.0, 1.0]_                              | Controls the contrast of the luminance in the image.            |
+| `brightness`   | _[-1.0, 1.0]_                              | Controls the brightness from dark to bright.                    |
+| `sharpness`    | _[-1.0, 1.0]_                              | Controls edge / contrast enhancement and blurring effects.      |
+| `gamma`        | _[-1.0, 1.0]_                              | Adjusts the linearity of the luminance quantizer.               |
+| `resolution`   | ?                                          | Controls the resolution of the image.                           |
+| `artifacts`    | ?                                          | Controls influence of artifacts caused by color changes.        |
+| `fringing`     | ?                                          | Controls influence of fringing caused by brightness changes.    |
+| `bleed`        | ?                                          | Controls the amount of color bleed (color resolution reduction) |
+| `merge_fields` | _[0, 1]_                                   | If true, merges even and off fields to reduce flicker.          |
