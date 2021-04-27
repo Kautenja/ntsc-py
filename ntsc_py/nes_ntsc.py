@@ -96,59 +96,6 @@ LIBRARY.NES_NTSC_Process.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.PO
 LIBRARY.NES_NTSC_Process.restype = None
 
 
-# the color palette for rendering RGB colors
-PALETTE = np.array([
-    [102,102,102], [  0, 42,136], [ 20, 18,168], [ 59,  0,164],
-    [ 92,  0,126], [110,  0, 64], [108,  7,  0], [ 87, 29,  0],
-    [ 52, 53,  0], [ 12, 73,  0], [  0, 82,  0], [  0, 79,  8],
-    [  0, 64, 78], [  0,  0,  0], [  0,  0,  0], [  0,  0,  0],
-    [174,174,174], [ 21, 95,218], [ 66, 64,254], [118, 39,255],
-    [161, 27,205], [184, 30,124], [181, 50, 32], [153, 79,  0],
-    [108,110,  0], [ 56,135,  0], [ 13,148,  0], [  0,144, 50],
-    [  0,124,142], [  0,  0,  0], [  0,  0,  0], [  0,  0,  0],
-    [254,254,254], [100,176,254], [147,144,254], [199,119,254],
-    [243,106,254], [254,110,205], [254,130,112], [235,159, 35],
-    [189,191,  0], [137,217,  0], [ 93,229, 48], [ 69,225,130],
-    [ 72,206,223], [ 79, 79, 79], [  0,  0,  0], [  0,  0,  0],
-    [254,254,254], [193,224,254], [212,211,254], [233,200,254],
-    [251,195,254], [254,197,235], [254,205,198], [247,217,166],
-    [229,230,149], [208,240,151], [190,245,171], [180,243,205],
-    [181,236,243], [184,184,184], [  0,  0,  0], [  0,  0,  0]
-], dtype=np.uint8)
-
-
-def rgb2nes(img):
-    """
-    Convert the RGB image to NES palette.
-
-    Args:
-        img: the image in HWC format and RGB color space
-
-    Returns:
-        a matrix of NES color palette indexes that closely match the RGB colors
-
-    """
-    # compute the MSE between the image and each color in the palette
-    distance = (img.astype(float) - PALETTE[:, None, None, :].astype(float))**2
-    distance = np.mean(distance, axis=-1, keepdims=True)
-    # return the color with the lowest error as the code for each RGB tuple
-    return np.argmin(distance, axis=0).astype(np.uint8)
-
-
-def nes2rgb(img):
-    """
-    Convert the NES palette image to RGB.
-
-    Args:
-        img: the image in HW format and NES color space
-
-    Returns:
-        a matrix of RGB color tuple that are referenced by the palette
-
-    """
-    return PALETTE[img]
-
-
 class NES_NTSC:
     """A graphical filter that models the Nintendo Entertainment System."""
 
@@ -226,4 +173,4 @@ class NES_NTSC:
 
 
 # explicitly define the outward facing API of this module
-__all__ = [NES_NTSC.__name__, rgb2nes.__name__, nes2rgb.__name__, 'PALETTE']
+__all__ = [NES_NTSC.__name__]

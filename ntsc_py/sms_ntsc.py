@@ -94,40 +94,6 @@ LIBRARY.SMS_NTSC_Process.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.PO
 LIBRARY.SMS_NTSC_Process.restype = None
 
 
-def rgb32_888_to_rgb16_565(img):
-    """
-    Convert the 32-bit RGB888 image to 16-bit RGB565.
-
-    Args:
-        img: the 32-bit image in HWC format and RGB888 color space
-
-    Returns:
-        the 16-bit image in HWC format in RGB565 color space
-
-    """
-    r = ((32 * img[..., 0:1] / 255).round().astype('uint16') & 0b11111)  << 11
-    g = ((64 * img[..., 1:2] / 255).round().astype('uint16') & 0b111111) << 5
-    b =  (32 * img[..., 2:3] / 255).round().astype('uint16') & 0b11111
-    return r + g + b
-
-
-def rgb16_565_to_rgb32_888(img):
-    """
-    Convert the 16-bit RGB565 image to 32-bit RGB888.
-
-    Args:
-        img: the 32-bit image in HWC format and RGB565 color space
-
-    Returns:
-        the 32-bit image in HWC format in RGB888 color space
-
-    """
-    r = (255.0 * ((img >> 11) & 0b11111)  / 32.0).round().astype('uint8')
-    g = (255.0 * ((img >> 5)  & 0b111111) / 64.0).round().astype('uint8')
-    b = (255.0 * ((img)       & 0b11111)  / 32.0).round().astype('uint8')
-    return np.concatenate([r, g, b], axis=-1)
-
-
 class SMS_NTSC:
     """A graphical filter that models the Sega Master System."""
 
