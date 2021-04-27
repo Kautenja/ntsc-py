@@ -104,7 +104,8 @@ ntsc = NES_NTSC()
 The `setup` function can be used to configure the parameters of the filter. The
 same parameters of the `setup` function can be passed to the constructor on
 initialization of the filter. See the table below for a description of each of
-the parameters for the setup function
+the parameters for the setup function. The `setup` function may be called 
+multiple times to set individual parameters between frame renders.
 
 ```python
 ntsc.setup(mode='composite', gamma=1, artifacts=2, sharpness=0.4, ...)
