@@ -37,7 +37,7 @@ LIB_NTSC = Extension(LIB_NAME,
 
 setup(
     name='ntsc_py',
-    version='0.2.0',
+    version='0.2.1',
     description='An interface to various graphical NTSC filters.',
     long_description=README,
     long_description_content_type='text/markdown',
