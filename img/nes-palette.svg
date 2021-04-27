@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="288pt" version="1.1" viewBox="0 0 432 288" width="432pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2021-04-27T10:10:17.900149</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.3.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linecap:butt;stroke-linejoin:round;}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 288 
+L 432 288 
+L 432 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 54 185.13 
+L 388.8 185.13 
+L 388.8 101.43 
+L 54 101.43 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g clip-path="url(#pf81ffe2eb7)">
+    <image height="84" id="image2b2c21df2d" transform="scale(1 -1)translate(0 -84)" width="335" x="54" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAU8AAABUCAYAAAACq7UeAAAFjElEQVR4nO3dwW4cxxlF4VM9MyQlUqacjQMjAbxIHiGPpdcLko2UjRAEAbJxgBgw7BhiLJq2JEskNdPV1VWVBf0EhZ8IiJwPmO3FdM/MZbE3N7XWOoHmFf5xCTUwdVPhfA8pLpJthadzcGaDJzU2EzJTuiVFhm6uYXsV+kbX3TX1+F1cIHA4OnA4nkMzb3eJwy7uwjvwcXPGMp3EZXZY+mdUTsMy6UD5Dak/jstsjemrL0n727DInDPPnj3j1atXYZn3ZfpfvwFJeogsT0kaYHlK0gDLU5IGWJ6SNMDylKQBlqckDbA8JWmA5SlJAyxPSRpgeUrSAMtTkgZYnpI0wPKUpAGWpyQNsDwlaYDlKUkDLE9JGmB5StKAbXRg75BXKC0uc9vg0RK7DdQr1AwpcGtp6sB6NxcTJQFMNTAR2BQ4it0Gou9pKW7LBqBOB9bNITSzbBI5+HbmBDOxoXOfqT3255lahRb4w+yNTZ5hvw+LXJaFFvke71F4eR4K/OlrOKxxmccFfvdDbNGdFvj929ij9+MKJ7G/dTZp5ni6jA09+Tec/i00cj37jsPTf4Vm/nT+nh/Pfw7N/M8n8FPgrhrA6+Pf8n77aWjmh/oHcv91YGJiutlA+SwusVV2f/wz6fIiLLPWyvX1dVjefQovz8bdguYcWJ69wLL8crILsix3J8/IU2JboQcvcpI6TC04dIVtDs3sy4FePsYFAm29odab0MxSYYk8fAFzu2HuR3GZHfZ9JvclLJMOU62kyLHc2tjNM9Mh7sRQa30wJ0+feUrSAMtTkgZYnpI0wPKUpAGWpyQNsDwlaYDlKUkDLE9JGmB5StIAy1OSBliekjTA8pSkAZanJA2wPCVpgOUpSQMsT0kaYHlK0gDLU5IGbHPOoYFLhpw35BIYWhI5T6QetxuxWSDHLlGwXRs5eF1smwppk4kdDMlwFPu5511hzoHbK8A8N+bgnbp8DHPw+EymkWvcF76TWFomt7jPKJGYcoYSeENbpeV8lxuk1krvkd/1+7N9/vx5aODb/Y4Xf/mCQ9mEZR6XHReXnzMFludpgddvYsvztB744vBtYCIcp0vOp7+HZvbjb2hP/hqaeXv2ng+fvgnNvDpv/Pg0NJKLT+AqeADu+5NL3u+uQjP3dWXtkaNyCT4kKIGjcrWSXryA16/CInvvlBJ58ro/4SfPnBt5roQeQpaJnGMH4DYLzBmmwPrcro05r7FbbRTylEmBoY1M38Ueu/OuhJ+6c757RZoz5MCTZwdyauTA0bLeYWkLaw+8+A7kGUpgZl3vMqM/pAfCZ56SNMDylKQBlqckDbA8JWmA5SlJAyxPSRpgeUrSAMtTkgZYnpI0wPKUpAGWpyQNsDwlaYDlKUkDLE9JGmB5StIAy1OSBliekjTA8pSkAfEDcEunrZlW4nq5rY11zaQWtxuxrlBqIgVOe+xqZqmx9zOlzEIhcgCu15VWYyczlrWxBE/PlHL3irQusO5iM9sELXizrNcKPXLLJsFSoCxxka3GX/gDsn358mVo4M285c2X35HXuPLcrjvq289D1zNPVjh8qKF7Q4/Y87pfhGYe8YYz/hmYCH1zSd99H5p5eNy5fRIaybszeBec+cMp/PwoLq8DhyMokYucHXq7gh45qJfg469gvYiLbB32H+PyHpjtsgT+JQKWpdHKTK9x65ltbaxlJgU+ZVjXTqmx5blhZiGHZnYyO0pwZqGnFjsAt8ISuzzMst7DybPAGjwA14Aet//2S2jsfwZ0YFkgcCKZ1u7W6v5P+cxTkgZYnpI0wPKUpAGWpyQNsDwlaYDlKUkDLE9JGmB5StIAy1OSBliekjTA8pSkAZanJA2wPCVpgOUpSQMsT0kaYHlK0gDLU5IGWJ6SNMDylKQB/wWXnUQUkNueOAAAAABJRU5ErkJggg==" y="-101.13"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 54 185.13 
+L 54 101.43 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 388.8 185.13 
+L 388.8 101.43 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 54 185.13 
+L 388.8 185.13 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 54 101.43 
+L 388.8 101.43 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf81ffe2eb7">
+   <rect height="83.7" width="334.8" x="54" y="101.43"/>
+  </clipPath>
+ </defs>
+</svg>
