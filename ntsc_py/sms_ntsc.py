@@ -115,12 +115,12 @@ class SMS_NTSC:
         self._output = LIBRARY.SMS_NTSC_InitializeOutputPixels()
         # create the input and output buffers
         shape_input = LIBRARY.SMS_NTSC_HEIGHT(), LIBRARY.SMS_NTSC_WIDTH_INPUT(), 1
-        self.sms_pixels = ndarray_from_byte_buffer(self._input, shape_input,
+        self.input = ndarray_from_byte_buffer(self._input, shape_input,
             ctype=ctypes.c_uint16,
             dtype='uint16'
         )
         shape_output = LIBRARY.SMS_NTSC_HEIGHT(), LIBRARY.SMS_NTSC_WIDTH_OUTPUT(), 4
-        self.ntsc_pixels = ndarray_from_byte_buffer(self._output, shape_output)[:, :, 1:]
+        self.output = ndarray_from_byte_buffer(self._output, shape_output)[:, :, 1:]
         # setup the mode
         self.setup(mode=mode, **kwargs)
 

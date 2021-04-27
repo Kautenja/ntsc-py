@@ -118,9 +118,9 @@ class NES_NTSC:
         self._output = LIBRARY.NES_NTSC_InitializeOutputPixels()
         # create the input and output buffers
         shape_input = LIBRARY.NES_NTSC_HEIGHT(), LIBRARY.NES_NTSC_WIDTH_INPUT(), 1
-        self.nes_pixels = ndarray_from_byte_buffer(self._input, shape_input)
+        self.input = ndarray_from_byte_buffer(self._input, shape_input)
         shape_output = LIBRARY.NES_NTSC_HEIGHT(), LIBRARY.NES_NTSC_WIDTH_OUTPUT(), 4
-        self.ntsc_pixels = ndarray_from_byte_buffer(self._output, shape_output)[:, :, 1:]
+        self.output = ndarray_from_byte_buffer(self._output, shape_output)[:, :, 1:]
         # setup the flicker effect
         self.flicker = flicker
         self._is_even_frame = False
