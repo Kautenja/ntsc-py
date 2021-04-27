@@ -129,7 +129,7 @@ Images can be filtered by assigning them to the input buffer of the image in
 NES pixel format using the NES palette of 64 unique colors.
 
 ```python
-ntsc.nes_pixels[:] = np.random.uniform(0, 63, ntsc.nes_pixels.shape)
+ntsc.input[:] = np.random.uniform(0, 63, ntsc.input.shape)
 ```
 
 Alternatively, RGB images can be converted to the NES palette using a mean
@@ -137,11 +137,11 @@ squared error fit.
 
 ```python
 from ntsc_py import rgb2nes, nes2rgb
-ntsc.nes_pixels[:] = rgb2nes(np.random.uniform(0, 255, ntsc.nes_pixels.shape[:2] + (3, )))
+ntsc.input[:] = rgb2nes(np.random.uniform(0, 255, ntsc.input.shape[:2] + (3, )))
 ```
 
-Once `nes_pixels` has been updated with new pixel data, call `process` to filter
-the image and compute the RGB output in `ntsc_pixels`.
+Once `input` has been updated with new pixel data, call `process` to filter
+the image and compute the RGB output in `output`.
 
 ```python
 ntsc.filter()
