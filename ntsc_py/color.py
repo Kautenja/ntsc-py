@@ -46,12 +46,21 @@ def nes2rgb(img):
     Convert the NES palette image to RGB.
 
     Args:
-        img: the image in HW format and NES color space
+        img: the image in HW or HW1 format in NES color space
 
     Returns:
         a matrix of RGB color tuple that are referenced by the palette
 
     """
+    if len(img.shape) == 2:  # matrix input, continue
+        pass
+    elif len(img.shape) == 3 and img.shape[-1] == 1:  # 1 channel 3D input
+        img = img[..., 0]  # flatten the outer dimension to a 2D matrix
+    else:  # invalid NES pixels
+        raise ValueError(
+            'expected 2D input or 3D input with 1 channel, '
+            f'but received input with shape {repr(img.shape)}'
+        )
     return NES_PALETTE[img]
 
 
