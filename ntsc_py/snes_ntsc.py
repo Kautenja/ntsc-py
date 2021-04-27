@@ -1,6 +1,5 @@
 """A CTypes interface to Blargg's C++ SNES NTSC filter."""
 import ctypes
-import numpy as np
 from ._library import LIBRARY
 from .utility import ndarray_from_byte_buffer
 
