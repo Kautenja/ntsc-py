@@ -2,11 +2,13 @@
 from .nes_ntsc import NES_NTSC
 from .snes_ntsc import SNES_NTSC
 from .sms_ntsc import SMS_NTSC
-from .color import rgb2nes, nes2rgb, rgb32_888_to_rgb16_565, rgb16_565_to_rgb32_888
+from .color import NES_PALETTE, rgb2nes, nes2rgb
+from .color import rgb32_888_to_rgb16_565, rgb16_565_to_rgb32_888
 
 
 # explicitly define the outward facing API of the package
 __all__ = [
+    'NES_PALETTE',
     NES_NTSC.__name__,
     SNES_NTSC.__name__,
     SMS_NTSC.__name__,
