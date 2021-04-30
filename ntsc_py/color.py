@@ -34,6 +34,10 @@ def rgb2nes(img):
         a matrix of NES color palette indexes that closely match the RGB colors
 
     """
+    if not isinstance(img, np.ndarray):
+        img = np.array(img)
+    img = img.astype(np.uint8)
+
     # compute the MSE between the image and each color in the palette
     distance = (img.astype(float) - NES_PALETTE[:, None, None, :].astype(float))**2
     distance = np.mean(distance, axis=-1, keepdims=True)
@@ -52,6 +56,10 @@ def nes2rgb(img):
         a matrix of RGB color tuple that are referenced by the palette
 
     """
+    if not isinstance(img, np.ndarray):
+        img = np.array(img)
+    img = img.astype(np.uint8)
+
     if len(img.shape) == 2:  # matrix input, continue
         pass
     elif len(img.shape) == 3 and img.shape[-1] == 1:  # 1 channel 3D input
@@ -75,9 +83,13 @@ def rgb32_888_to_rgb16_565(img):
         the 16-bit image in HWC format in RGB565 color space
 
     """
-    r = ((32 * img[..., 0:1] / 255).round().astype(np.uint16) & 0b11111)  << 11
-    g = ((64 * img[..., 1:2] / 255).round().astype(np.uint16) & 0b111111) << 5
-    b =  (32 * img[..., 2:3] / 255).round().astype(np.uint16) & 0b11111
+    if not isinstance(img, np.ndarray):
+        img = np.array(img)
+    img = img.astype(int)
+
+    r = ((31 * img[..., 0:1] / 255).round().astype(np.uint16) & 0b11111)  << 11
+    g = ((63 * img[..., 1:2] / 255).round().astype(np.uint16) & 0b111111) << 5
+    b =  (31 * img[..., 2:3] / 255).round().astype(np.uint16) & 0b11111
     return r + g + b
 
 
@@ -92,6 +104,10 @@ def rgb16_565_to_rgb32_888(img):
         the 32-bit image in HWC format in RGB888 color space
 
     """
+    if not isinstance(img, np.ndarray):
+        img = np.array(img)
+    img = img.astype(int)
+
     r = (255.0 * ((img >> 11) & 0b11111)  / 32.0).round().astype(np.uint8)
     g = (255.0 * ((img >> 5)  & 0b111111) / 64.0).round().astype(np.uint8)
     b = (255.0 * ((img)       & 0b11111)  / 32.0).round().astype(np.uint8)
