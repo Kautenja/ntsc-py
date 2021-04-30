@@ -32,21 +32,21 @@
             <img
                 width="256"
                 alt="NES NTSC"
-                src="https://user-images.githubusercontent.com/2184469/115817023-a0fdca00-a3bf-11eb-9a87-faf1d527ddc6.gif"
+                src="https://user-images.githubusercontent.com/2184469/116754571-91d5d800-a9ce-11eb-8c4b-230e9df1fecf.gif"
             />
         </td>
         <td>
              <img
                 width="256"
                 alt="SNES NTSC"
-                src="https://user-images.githubusercontent.com/2184469/115882317-45a8f780-a412-11eb-91bb-0ec593194e0e.gif"
+                src="https://user-images.githubusercontent.com/2184469/116754587-97cbb900-a9ce-11eb-9331-25c4198f25f9.gif"
             />
         </td>
         <td>
             <img
                 width="256"
                 alt="SMS NTSC"
-                src="https://user-images.githubusercontent.com/2184469/115904006-e48d1e00-a429-11eb-967e-71c1ba2b01c5.gif"
+                src="https://user-images.githubusercontent.com/2184469/116754583-9601f580-a9ce-11eb-890e-5c39a6cc8d3b.gif"
             />
         </td>
     </tr>
