@@ -74,7 +74,7 @@ You'll need to install the Visual-Studio 17.0 tools for Windows installation.
 The [Visual Studio Community](https://visualstudio.microsoft.com/downloads/)
 package provides these tools for free.
 
-# Usage
+<!-- # Usage -->
 
 <!-- ## Command Line Interface
 
@@ -90,7 +90,7 @@ To print out documentation for the command line interface execute:
 ntsc_py -h
 ``` -->
 
-## Python API
+<!-- ## Python API
 
 ### NES NTSC
 
@@ -104,7 +104,7 @@ ntsc = NES_NTSC()
 The `setup` function can be used to configure the parameters of the filter. The
 same parameters of the `setup` function can be passed to the constructor on
 initialization of the filter. See the table below for a description of each of
-the parameters for the setup function. The `setup` function may be called 
+the parameters for the setup function. The `setup` function may be called
 multiple times to set individual parameters between frame renders.
 
 ```python
@@ -154,4 +154,4 @@ Coming Soon!
 
 ### SMS NTSC
 
-Coming Soon!
+Coming Soon! -->
